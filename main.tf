@@ -42,9 +42,9 @@ resource "snowflake_grant_privileges_to_account_role" "database_grant" {
 }
 
 resource "snowflake_schema" "schema" {
-  database   = snowflake_database.db.name
-  name       = "TF_DEMO"
-  is_managed = false
+  database            = snowflake_database.db.name
+  name                = "TF_DEMO"
+  with_managed_access = false
 }
 
 resource "snowflake_grant_privileges_to_account_role" "schema_grant" {
