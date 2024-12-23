@@ -20,3 +20,8 @@ resource "snowflake_warehouse" "warehouse" {
   warehouse_size = "xsmall"
   auto_suspend   = 60
 }
+
+provider "snowflake" {
+  alias = "securityadmin"
+  role  = "SECURITYADMIN"
+}
